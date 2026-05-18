@@ -8,4 +8,8 @@ git commit -m "auto update $(date)"
 
 git push
 
-echo "✅ Done!"
+if [ $? -eq 0 ]; then
+    echo "✅ Push success!"
+else
+    echo "❌ Push failed!"
+fi
